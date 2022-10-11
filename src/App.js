@@ -1,4 +1,5 @@
 import React from "react";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 
 import Expenses from "./components/Expenses/Expenses";
 
@@ -32,21 +33,16 @@ const App = () => {
     React.createElement(Expenses, { items: expenses })
   ); */
 
+  const addExpenseHandler = (expense) => {
+    console.log("in App.js");
+    console.log(expense);
+  };
   return (
     <div>
-      <h2>Let's get started! </h2>
+      <NewExpenses onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
 };
 
-/* 
-export function newMsg() {
-  return (
-    <div>
-      <p>Welcome to React App</p>
-    </div>
-  );
-}
- */
 export default App;
