@@ -3,6 +3,7 @@ import ExpensesFilter from "./ExpensesFilter";
 import "./Expenses.css";
 import Card from "../UI/Card";
 import ExpensesList from "./ExpensesList";
+import ExpenseChart from "./ExpensesChart";
 
 const Expenses = (props) => {
   console.log(props);
@@ -52,6 +53,7 @@ const Expenses = (props) => {
 
         {/* {expenseContent}
          */}
+        <ExpenseChart expenses={FilteredExpenses} />
         <ExpensesList items={FilteredExpenses} />
       </Card>
     </li>
